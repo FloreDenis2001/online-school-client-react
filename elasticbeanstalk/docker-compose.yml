@@ -1,0 +1,6 @@
+version: '3'
+services:
+  production:
+    image: floredenis2001/online-school-react-client:v3
+    ports:
+      - "80:80"

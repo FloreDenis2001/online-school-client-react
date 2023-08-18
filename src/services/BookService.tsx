@@ -10,7 +10,7 @@ class BookService {
 
 
     api<U, T>(path: string, method: string, body: U, token?: string): Promise<HttpResponse<T>> {
-        const url = "http://localhost:8080/api/v1/books" + path;
+        const url = "http://online-school.eu-west-1.elasticbeanstalk.com/api/v1/books" + path;
         const options: RequestInit = {
             method,
             headers: {

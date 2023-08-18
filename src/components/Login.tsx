@@ -21,11 +21,9 @@ const Login: React.FC = () => {
     let { studentLogin, setStudent } = useContext(ContextLogin) as LoginContextType;
 
     const handleRefresh = () => {
-        // Put your refresh logic here, for example, fetching new data from the server
         console.log('Refreshing...');
       };
     
-      // Use the custom hook to add the refresh action to the component
       useRefreshAction(handleRefresh);
     
     
