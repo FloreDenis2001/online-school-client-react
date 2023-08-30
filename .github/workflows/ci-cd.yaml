@@ -61,7 +61,7 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "new app version: ${{ env.BUILD_NUMBER }}"
-          git push origin HEAD:master
+          git push origin HEAD:main
           # env:
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -77,4 +77,3 @@ jobs:
           version_label: ${{ env.BUILD_NUMBER }}
           version_description: Version ${{ env.BUILD_NUMBER }} deployed via github actions ${{ github.sha }}
           wait_for_deployment: 120
-### update 
