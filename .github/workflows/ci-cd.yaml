@@ -42,7 +42,7 @@ jobs:
         run: |
           chmod +x ./.ci/build-publish.sh
           USERNAME=floredenis2001 \
-          REPO=online-school-client-react \
+          REPO=online-school-react-client \
           TAG=${{ env.BUILD_NUMBER }} \
           ./.ci/build-publish.sh .
 
@@ -55,7 +55,7 @@ jobs:
       - name: Update and commit app version in docker-compose.yml
         run: |
           echo -e "Current ./elasticbeanstalk/docker-compose.yml\n$(cat elasticbeanstalk/docker-compose.yml)"
-          sed -i -E 's_(floredenis2001/online-school-client-react:)([^"]*)_\1'${{ env.BUILD_NUMBER }}'_' elasticbeanstalk/docker-compose.yml
+          sed -i -E 's_(floredenis2001/online-school-react-client:)([^"]*)_\1'${{ env.BUILD_NUMBER }}'_' elasticbeanstalk/docker-compose.yml
           echo -e "Current elasticbeanstalk/docker-compose.yml\n$(cat elasticbeanstalk/docker-compose.yml)"
           git config user.name github-actions
           git config user.email github-actions@github.com
@@ -71,10 +71,9 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           region: eu-west-1
-          environment_name:  Online-school-react-client-env
+          environment_name: Online-school-react-client-env
           application_name:  Online-school-react-client
           deployment_package: ./elasticbeanstalk/docker-compose.yml
           version_label: ${{ env.BUILD_NUMBER }}
           version_description: Version ${{ env.BUILD_NUMBER }} deployed via github actions ${{ github.sha }}
           wait_for_deployment: 120
-##dadfafafafsa
