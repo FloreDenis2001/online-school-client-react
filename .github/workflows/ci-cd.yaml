@@ -70,7 +70,7 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          region: us-east-1
+          region: eu-west-1
           environment_name:  Online-school-react-client-env
           application_name:  Online-school-react-client
           deployment_package: ./elasticbeanstalk/docker-compose.yml
