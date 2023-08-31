@@ -1,6 +1,6 @@
 version: '3'
 services:
   production:
-    image: floredenis2001/online-school-react-client:31.08.2023.10.38.13
+    image: floredenis2001/online-school-react-client:31.08.2023.10.51.03
     ports:
       - "80:80"
