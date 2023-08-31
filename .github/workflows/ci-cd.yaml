@@ -77,4 +77,3 @@ jobs:
           version_label: ${{ env.BUILD_NUMBER }}
           version_description: Version ${{ env.BUILD_NUMBER }} deployed via github actions ${{ github.sha }}
           wait_for_deployment: 120
-###dadada
